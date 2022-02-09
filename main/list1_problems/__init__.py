@@ -29,7 +29,23 @@ def sum3(nums):
 
 # print(sum3([1,2,3]))
 
-#def rotate_left3(nums):
-#    return nums[1:2] + nums[0]
+def rotate_left3(nums):
+    return [nums[1], nums[2], nums[0]]
 
 #print(rotate_left3([1,2,3]))
+
+
+def reverse3(nums):
+    return [ nums[2], nums[1], nums[0] ]
+
+print(reverse3([1,2,3]))
+
+
+
+
+
+
+
+
+
+
