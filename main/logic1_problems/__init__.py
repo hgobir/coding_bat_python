@@ -67,7 +67,37 @@ def sorta_sum(a, b):
     return (a + b) if not 10 <= (a + b) <= 19 else 20
 
 
+# print(sorta_sum(3, 4))
+# print(sorta_sum(9, 4))
+# print(sorta_sum(10, 11))
 
-#print(sorta_sum(3, 4))
-#print(sorta_sum(9, 4))
-print(sorta_sum(10, 11))
+
+def alarm_clock(day, vacation):
+    if not vacation:
+        return '10:00' if day == 0 or day == 6 else '7:00'
+    else:
+        return 'off' if day == 0 or day == 6 else '10:00'
+
+#print(alarm_clock(1, False))
+#print(alarm_clock(5, False))
+#print(alarm_clock(0, False))
+
+#print(alarm_clock(6, True))
+
+def love6(a, b):
+    return a == 6 or b == 6 or a + b == 6 or a - b == 6 or b - a == 6
+
+#print(love6(-7, 1))
+
+def in1to10(n, outside_mode):
+    return (not outside_mode and 1 <= n <= 10) or (outside_mode and not 1 < n < 10)
+
+
+#print(in1to10(1, True))
+
+
+def near_ten(num):
+    return num % 10 == 0 or num % 10 == 1 or num % 10 == 2
+
+
+
