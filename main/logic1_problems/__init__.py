@@ -97,7 +97,14 @@ def in1to10(n, outside_mode):
 
 
 def near_ten(num):
-    return num % 10 == 0 or num % 10 == 1 or num % 10 == 2
+    return (num % 10) <= 2 or 8 <= (num % 10) <= 9
+
+#print(near_ten(12))
+#print(near_ten(18))
+#print(near_ten(158))
+print(near_ten(19))
+
+
 
 
 
