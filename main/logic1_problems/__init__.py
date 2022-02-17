@@ -102,7 +102,7 @@ def near_ten(num):
 #print(near_ten(12))
 #print(near_ten(18))
 #print(near_ten(158))
-print(near_ten(19))
+#print(near_ten(19))
 
 
 
