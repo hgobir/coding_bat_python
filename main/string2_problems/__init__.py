@@ -58,11 +58,30 @@ def cat_dog(str):
 
     return cat_count == dog_count
 
+
 # print(cat_dog('1cat1cadodog'))
 
 def count_code(str):
     count = 0
     for i in range(len(str) - 3):
-        if str[i: i + 2] == 'co' and str[i +4] == 'e':
+        if str[i: i + 2] == 'co' and str[i + 3: i + 4] == 'e':
+            count += 1
+    return count
 
 
+# print(count_code('cozexxcope'))
+
+def end_other(a, b):
+    # print(a[len(a) - 1: len(a)])
+    # print(b[len(b) - 1: len(b)])
+    # return a[len(a) - 1: len(a)].lower() == b[len(b) - 1: len(b)].lower()
+    # return a.endswith(b[len(b) - 1: len(b)])
+    a = a.lower()
+    b = b.lower()
+
+    print(f'first we are checking if a string [{a}] ends with b string [{b}] to which the answer is {a.endswith(b)}')
+    print(f'next we are checking if b string [{b}] ends with a string [{a}] to which the answer is {b.endswith(a)}')
+    return b.endswith(a) or a.endswith(b)
+
+
+print(end_other('yz', '12xz'))
