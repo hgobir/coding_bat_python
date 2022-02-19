@@ -84,4 +84,12 @@ def end_other(a, b):
     return b.endswith(a) or a.endswith(b)
 
 
-print(end_other('yz', '12xz'))
+#print(end_other('yz', '12xz'))
+
+def xyz_there(str):
+    for i in range(len(str) - 2):
+        if str[i: i + 3] == 'xyz' and str[i - 1] != '.':
+            return True
+    return False
+
+#print(xyz_there('abc.xyzxyz'))
