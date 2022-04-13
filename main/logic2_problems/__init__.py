@@ -107,3 +107,51 @@ def lucky_sum(a, b, c):
 
 # print(lucky_sum(1, 13, 3))
 # print(lucky_sum(13, 2, 3))
+
+
+def no_teen_sum(a, b, c):
+    new_a = fix_teen(a)
+    new_b = fix_teen(b)
+    new_c = fix_teen(c)
+    return new_a + new_b + new_c
+
+
+def fix_teen(n):
+    # if 13 <= n < 15 and 17 <= n < 20:
+    if 13 <= n < 15:
+        return 0
+    else:
+        return 0 if 17 <= n < 20 else n
+
+
+# print(no_teen_sum(1,2,3))
+# print(no_teen_sum(2,13,1))
+# print(no_teen_sum(2,1,14))
+
+
+# print(3 % 10)
+def round_sum(a, b, c):
+    new_a = round10(a)
+    new_b = round10(b)
+    new_c = round10(c)
+    return new_a + new_b + new_c
+
+
+def round10(num):
+    remainder = num % 10
+    new_num = num - remainder if remainder < 5 else num + (10 - remainder)
+    return new_num
+
+
+# print(round_sum(16, 17, 18))
+
+# coding bat solutions below!
+# def round_sum(a, b, c):
+#     return round10(a) + round10(b) + round10(c)
+#
+#
+# def round10(num):
+#     mod = num % 10
+#     num -= mod
+#     if mod >= 5: num += 10
+#     return num
