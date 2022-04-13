@@ -1,4 +1,3 @@
-
 # need to think and code for failures/ edge cases first!!!
 # my solution that didnt solve all edge cases follows then coding bat solution after
 
@@ -43,7 +42,7 @@
 
 # coding bat solution
 def make_bricks(small, big, goal):
-    if goal > big*5 + small:
+    if goal > big * 5 + small:
         return False
 
     if goal % 5 > small:
@@ -51,7 +50,60 @@ def make_bricks(small, big, goal):
 
     return True
 
+
 # print(make_bricks(3, 1, 8)) # True
 # print(make_bricks(3, 1, 9) # False
 # print(make_bricks(3, 2, 10)) # True
-print(make_bricks(3, 2, 9))  # True
+# print(make_bricks(3, 2, 9))  # True
+
+
+def lone_sum(a, b, c):
+    if a != b and b != c and c != a:
+        return a + b + c
+    elif a == b and a != c:
+        return c
+    elif a == c and a != b:
+        return b
+    elif b == c and c != a:
+        return a
+    else:
+        return 0
+
+
+# print(lone_sum(3,2,3))
+# print(lone_sum(3,3,3))
+
+# coding bat solution
+
+# def lone_sum(a, b, c):
+#   sum = 0
+#   if a != b and a != c: sum += a
+#   if b != a and b != c: sum += b
+#   if c != a and c != b: sum += c
+#
+#   return sum
+
+
+def lucky_sum(a, b, c):
+    sum = 0
+
+    if a != 13:
+        sum += a
+    else:
+        return sum
+
+    if b != 13:
+        sum += b
+    else:
+        return sum
+
+    if c != 13:
+        sum += c
+    else:
+        return sum
+
+    return sum
+
+
+# print(lucky_sum(1, 13, 3))
+# print(lucky_sum(13, 2, 3))
