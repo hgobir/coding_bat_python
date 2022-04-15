@@ -155,3 +155,34 @@ def round10(num):
 #     num -= mod
 #     if mod >= 5: num += 10
 #     return num
+
+
+def close_far(a, b, c):
+    if (abs(a - b) <= 1 and abs(a - c) >= 2) or (abs(a - c) <= 1 and abs(a - b) >= 2):
+        return abs(b - c) >= 2
+    return False
+
+
+# print(close_far(1,2,10))
+# print(close_far(1,2,3))
+# print(close_far(4,1,3))
+# print(close_far(10,10,8))
+
+
+def make_chocolate(small, big, goal):
+    total_big = big * 5
+
+    if total_big + small == goal:
+        return small
+
+    if 0 <= (goal - total_big) <= small:
+        total_left = goal - total_big
+        print(total_left)
+        return total_left - small
+
+    return -1
+
+
+# print(make_chocolate(4, 1, 9))
+# print(make_chocolate(4, 1, 10))
+print(make_chocolate(4, 1, 7))
